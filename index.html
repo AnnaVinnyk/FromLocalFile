@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ReadFromLocalFile</title>
+    <link href="Custom.css" type="text/css" rel="stylesheet" />
+    <!--код для карточек с отзывами клиентов-->
+    <script async src="data.js"></script>
+    <!---->
+    <script async src="reviews.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <form class="forma">
+            <div class="orange-text">КОНСТРУКТОР ОТЗЫВОВ</div>
+            <div class="black-text" id="remark">Для того, чтобы заполнить форму конструктора, выберите и прочитайте файл
+                JSON</div>
+            <!--кнопка для выбора файла, считывания и формирования конструктора-->
+            <div><input type="file" id="file"></div>
+            <div class="blocks but content-font grid-for-content-blocks">
+                <div class="button top-zero" onclick="readFile(document.getElementById('file'))" id="load">Прочитать
+                    файл</div>
+            </div>
+            <div id="out" class="file"></div>
+            <div>
+                <label>Выберите имя для клиента </label><br>
+                <select id="name">
+                </select><br>
+            </div>
+            <div>
+                <label>Выберите компанию для клиента </label><br>
+                <select id="company">
+                </select>
+            </div>
+            <div>
+                <label>Выберите должность для клиента </label><br>
+                <select id="position">
+                </select>
+            </div>
+            <div id="review" class="review">
+                <label>Выберите текст отзыва</label>
+            </div>
+
+            <!--кнопка-->
+            <div class="blocks but content-font grid-for-content-blocks">
+                <div class="button" onclick="WhatSay()">Сформировать отзыв</div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form class="re-forma" id="reforma">
+            <div class="orange-text">СКОНСТРУИРОВАННЫЙ ОТЗЫВ</div>
+            <div id="reviews"></div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

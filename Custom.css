@@ -1,0 +1,206 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+    background-color: white;
+    margin: 30px;
+    padding: 0;
+}
+
+form {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 30px;
+    padding-top: 0;
+    border: 2px solid #ff7c00;
+    color: #61b401;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #f8f4e8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.file {
+    display: none;
+}
+
+.orange-text {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff7c00;
+}
+
+.black-text {
+    font-size: 16px;
+    color: black;
+}
+
+.button {
+    height: 40px;
+    width: 250px;
+    margin-top: 20px;
+    font-size: 17px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /*background-color: white;    
+    border: 1px solid #ff7c00;
+    color: white;*/
+    border-radius: 20px;
+    /*background-color: #0086e4;
+    background-color: #0047a3;*/
+    border: 1px solid #0047a3;;
+    background-color: #deefff;
+    color: #0047a3;
+    cursor: pointer;
+}
+
+.button-temp {
+    height: 40px;
+    width: 350px;
+    margin-top: 20px;
+    font-size: 17px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /*background-color: white;    
+    border: 1px solid #ff7c00;
+    color: white;*/
+    border-radius: 20px;
+    /*background-color: #0086e4;
+    background-color: #0047a3;*/
+    border: 1px solid #0047a3;;
+    background-color: #deefff;
+    color: #0047a3;
+    cursor: pointer;    
+}
+
+.top-zero {
+    margin-top: 0;
+}
+
+.button:hover, .button-temp:hover {
+    /*background-color: #0047a3;
+    background-color: #ff7c00;*/
+    border: 1px solid #0086e4;
+    background-color: #0086e4;
+    color: white;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+}
+
+.button:not(:hover), .button-temp:not(:hover) {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+}
+
+form > div {border: 0px solid black; text-align: center;}
+
+form > div:nth-child(1), form > div:nth-child(2), form > div:nth-child(3), form > div:nth-child(4), form > div:nth-child(10), form > div:nth-child(9), .re-forma > div:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    justify-items: center;
+}
+
+.re-forma > div {
+    padding-bottom: 20px;
+}
+
+#reviews {padding-bottom: 20px;}
+
+.review {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    color: black;
+    text-align: left;
+    font-size: 16px;
+}
+
+.review > label:nth-child(1) {
+    font-size: 20px;
+    color: #61b401;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.blocks-item {
+    border: 0px solid black;
+    background-color: white;
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
+    align-items: center;
+    /*display: grid;
+    align-items: stretch;*/
+}
+
+.sub1-blocks-item {
+    border: 0px solid black;
+    font-size: 19px;
+    color: #0047a3;
+    background-color: #deefff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #0047a3;
+    /*border-top: 1px solid #0047a3;*/
+}
+
+.sub2-blocks-item, .sub5-blocks-item {
+    border: 0px solid black;
+    /*font-style: italic;*/
+    text-align: center;
+    padding: 20px;
+    /*padding-bottom: 0;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    align-items: stretch;  
+    font-size: 20px;
+    color: #0047a3; 
+}
+
+.div-clients {
+    text-align: center;
+    align-self: center;    
+}
+
+.clients {max-width: 90px;}
+
+.organization {
+    padding-top: 0;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.profession {
+    padding-bottom: 0;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;    
+}
+
+.div-logos {
+    border: 0px green solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logos {max-width: 150px;}
+

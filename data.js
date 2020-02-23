@@ -30,18 +30,10 @@ function readFile(object) {
         document.getElementById('load').innerText = "Загрузить данные файла в конструктор";
     }
     if (flagok == 2) {
-        /*document.getElementById('remark').innerText = "Для повторного выбора файла JSON перезагрузите страницу";
-        document.getElementById('load').className = 'button-temp top-zero';
-        document.getElementById('load').innerText = "Загрузить данные файла в конструктор";*/
         DATAjson = document.getElementById('out').innerText;
         DATA = JSON.parse(DATAjson);
         DATAjson = JSON.stringify(DATA);
         console.log(DATAjson);
-        /*let A = document.createElement('a');
-        A.href = "data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(DATAjson) + '";
-        A.download = "Clients.json";
-        A.innerText = "Clients.json";
-        document.getElementById('forma-1').appendChild(A);*/
         //фомирование формы конструктора
         for (let i = 0; i < DATA.length; i++) {
             let optn = document.createElement('option');
@@ -67,6 +59,7 @@ function readFile(object) {
         document.getElementById('load').onclick = '';
         document.getElementById('save').className = 'visible';
     }
+    //запись текстового файла на жёсткий диск
     //var text = 'как записать строку в файл ".txt" с помощью js?';
     //document.write('<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(text) + '" download="text.txt">text.txt</a>');
 }

@@ -116,6 +116,11 @@ form > div:nth-child(1), form > div:nth-child(2), form > div:nth-child(3), form 
     justify-items: center;
 }
 
+form > div:nth-child(11) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
 .re-forma > div {
     padding-bottom: 20px;
 }
@@ -203,4 +208,8 @@ form > div:nth-child(1), form > div:nth-child(2), form > div:nth-child(3), form 
 }
 
 .logos {max-width: 150px;}
+
+.unvisible { display: none;}
+
+.visible {display: grid; justify-items: center;}
 

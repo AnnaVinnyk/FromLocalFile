@@ -14,14 +14,14 @@
 </head>
 
 <body>
-
+    <!--<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(DATAjson) + '" download="Clients.json">Clients.json</a>-->
     <div>
-        <form class="forma">
+        <form class="forma" id="form-1">
             <div class="orange-text">КОНСТРУКТОР ОТЗЫВОВ</div>
             <div class="black-text" id="remark">Для того, чтобы заполнить форму конструктора, выберите и прочитайте файл
                 JSON</div>
             <!--кнопка для выбора файла, считывания и формирования конструктора-->
-            <div><input type="file" id="file"></div>
+            <div><input type="file" id="file" alt="Здесь отображается имя файла"></div>
             <div class="blocks but content-font grid-for-content-blocks">
                 <div class="button top-zero" onclick="readFile(document.getElementById('file'))" id="load">Прочитать
                     файл</div>
@@ -49,6 +49,11 @@
             <!--кнопка-->
             <div class="blocks but content-font grid-for-content-blocks">
                 <div class="button" onclick="WhatSay()">Сформировать отзыв</div>
+            </div>
+            <div class="unvisible" id="save">
+                <span>Данные о клиентах доступны по ссылке
+                    <a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(DATAjson) + '"
+                        download="Clients.json">Clients.json</a></span>
             </div>
         </form>
     </div>

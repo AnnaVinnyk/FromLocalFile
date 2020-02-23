@@ -1,17 +1,19 @@
-let DATA, DATAjson;
+let DATA,
+    DATAjson,
+    flagok = 0;
 
 function readFile(object) {
-    let flagok = 1;
+    flagok++;
     var file = object.files[0];
-    console.log(file);
+    //console.log(file);
     let nameLength = file.name.length;
     if (file.name.indexOf('.json', file.name.length - 5) >= 0) {
         //чтение строки из файла JSON
         var reader = new FileReader()
         reader.onload = function () {
-            console.log('Вход в функцию загрузки содержимого файла\n' + String(reader.result));
+            //console.log('Вход в функцию загрузки содержимого файла\n' + String(reader.result));
             document.getElementById('out').innerHTML = reader.result;
-            document.getElementById('out').className = "file";
+            //document.getElementById('out').className = "file";
 
         }
         reader.readAsText(file);
@@ -26,8 +28,20 @@ function readFile(object) {
         document.getElementById('remark').innerText = "Для повторного выбора файла JSON перезагрузите страницу";
         document.getElementById('load').className = 'button-temp top-zero';
         document.getElementById('load').innerText = "Загрузить данные файла в конструктор";
+    }
+    if (flagok == 2) {
+        /*document.getElementById('remark').innerText = "Для повторного выбора файла JSON перезагрузите страницу";
+        document.getElementById('load').className = 'button-temp top-zero';
+        document.getElementById('load').innerText = "Загрузить данные файла в конструктор";*/
         DATAjson = document.getElementById('out').innerText;
         DATA = JSON.parse(DATAjson);
+        DATAjson = JSON.stringify(DATA);
+        console.log(DATAjson);
+        /*let A = document.createElement('a');
+        A.href = "data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(DATAjson) + '";
+        A.download = "Clients.json";
+        A.innerText = "Clients.json";
+        document.getElementById('forma-1').appendChild(A);*/
         //фомирование формы конструктора
         for (let i = 0; i < DATA.length; i++) {
             let optn = document.createElement('option');
@@ -51,7 +65,10 @@ function readFile(object) {
             document.getElementById('position').appendChild(optn);
         }
         document.getElementById('load').onclick = '';
+        document.getElementById('save').className = 'visible';
     }
+    //var text = 'как записать строку в файл ".txt" с помощью js?';
+    //document.write('<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(text) + '" download="text.txt">text.txt</a>');
 }
 
 let PROF = [{ "position": "Recruitment Manager" }, { "position": "HR Manager" }, { "position": "HR Specialist" }, { "position": "Региональный директор" }];
